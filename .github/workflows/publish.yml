@@ -64,7 +64,7 @@ jobs:
       - run: npm ci
       - name: npm récent (le trusted publishing exige npm >= 11.5.1)
         run: npm install -g npm@latest
-      - name: Jeton npm (seulement pour le TOUT PREMIER envoi : le trusted publishing exige que le paquet existe)
+      - name: "Jeton npm (seulement pour le TOUT PREMIER envoi, car le trusted publishing exige que le paquet existe)"
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
